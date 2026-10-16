@@ -1,0 +1,89 @@
+{
+  "oro_letras": {
+    "hex": "#DC9A39",
+    "rgb": [
+      220,
+      154,
+      57
+    ],
+    "luminancia": 0.3862,
+    "pixeles": 21971
+  },
+  "borde_cartela": {
+    "hex": "#B47932",
+    "rgb": [
+      180,
+      121,
+      50
+    ],
+    "luminancia": 0.2361,
+    "pixeles": 28180
+  },
+  "fondo_cartela": {
+    "hex": "#6F410F",
+    "rgb": [
+      111,
+      65,
+      15
+    ],
+    "luminancia": 0.0719,
+    "pixeles": 64041
+  },
+  "seis": {
+    "hex": "#FDD597",
+    "rgb": [
+      253,
+      213,
+      151
+    ],
+    "luminancia": 0.7071,
+    "pixeles": 3803
+  },
+  "medallon_borde": {
+    "hex": "#AE825E",
+    "rgb": [
+      174,
+      130,
+      94
+    ],
+    "luminancia": 0.2577,
+    "pixeles": 5576
+  },
+  "medallon_fondo": {
+    "hex": "#957056",
+    "rgb": [
+      149,
+      112,
+      86
+    ],
+    "luminancia": 0.1865,
+    "pixeles": 10248
+  },
+  "madera_tabla": {
+    "hex": "#482F1F",
+    "rgb": [
+      72,
+      47,
+      31
+    ],
+    "luminancia": 0.0351,
+    "pixeles": 213156
+  },
+  "madera_tabla_inferior": {
+    "hex": "#815748",
+    "rgb": [
+      129,
+      87,
+      72
+    ],
+    "luminancia": 0.1195,
+    "pixeles": 198525
+  },
+  "contraste": {
+    "oro_letras_sobre_madera_tabla": 5.13,
+    "oro_letras_sobre_fondo_cartela": 3.58,
+    "borde_cartela_sobre_madera_tabla": 3.36,
+    "seis_sobre_medallon_fondo": 3.2
+  },
+  "metodo": "Mediana por canal de los píxeles de la foto (sin suavizar) de cada zona, con las máscaras del calco erosionadas 2-4 px para no tocar bordes, paredes del relieve ni sombras. Contraste WCAG 2 (luminancia relativa sRGB)."
+}

@@ -1,0 +1,6 @@
+# solo en local: fotos de terceros sin depurar, capturas y temporales
+ref/
+pruebas/
+marca/scripts/_tmp/
+marca/comparacion-*.png
+node_modules/

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Casa Rural Garrido · Ademuz · Casa del siglo XVIII junto a la plaza</title>
+<meta name="description" content="Casa rural del siglo XVIII en la calle Solano, 6, junto a la plaza de Ademuz (Valencia): habitaciones con nombre propio y baño, balcón al valle del Turia, desayuno casero y sala con chimenea y piano. 9,2 en Booking.">
+<meta name="theme-color" content="#2a1810">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Casa Rural Garrido · Ademuz">
+<meta property="og:description" content="La casa del número 6: siglo XVIII, junto a la plaza de Ademuz, con balcón al valle del Turia.">
+<meta property="og:image" content="img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- script bloqueante: clases antes del primer pintado -->
+<script>
+(function (d) {
+  var h = d.documentElement;
+  h.classList.add('js');
+  // MANDO DE MAQUETA (no viaja al cliente): solo con ?revision
+  try {
+    var q = new URLSearchParams(location.search);
+    if (q.has('revision')) {
+      h.classList.add('revision');
+      if (q.get('densidad') === 'sobria') h.classList.add('densidad-sobria');
+    }
+  } catch (e) {}
+  // red de seguridad por si main.js no llega: la cortina se va sola
+  window.__redCortina = setTimeout(function () { h.classList.add('cortina-fuera'); }, 6500);
+})(document);
+</script>
+
+<!-- la foto del umbral (fuera) empieza a bajar antes que el CSS y los scripts -->
+<link rel="preload" as="image" type="image/avif" fetchpriority="high"
+      imagesrcset="img/fotos/porton-noche-480.avif 480w, img/fotos/porton-noche-800.avif 800w, img/fotos/porton-noche-1201.avif 1201w"
+      imagesizes="(max-width: 899px) 92vw, 500px">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze:wght@500;700&family=Grenze:wght@700&family=Grenze+Gotisch:wght@700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap">
+<link rel="stylesheet" href="css/estilos.css?v=47ac380d">
+<link rel="icon" href="marca/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="marca/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="marca/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<noscript><style>.cortina{display:none!important}</style></noscript>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Casa Rural Garrido",
+  "description": "Casa rural del siglo XVIII junto a la plaza de Ademuz, con balcón al valle del Turia.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Solano, 6",
+    "addressLocality": "Ademuz",
+    "postalCode": "46140",
+    "addressRegion": "Valencia",
+    "addressCountry": "ES"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 40.06033, "longitude": -1.28604 },
+  "telephone": "+34 677 50 74 67",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Wifi gratuito", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Desayuno", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Sala con chimenea y piano", "value": true }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="saltar" href="#principal">Saltar al contenido</a>
+
+<!-- ============ cortina: el rótulo se talla y el «6» se abre ============
+     Primer pintado: la tabla de nogal con la cartela y las letras sin dorar.
+     Con JS las letras se tallan una a una, aparece el medallón del 6 y desde
+     su centro se abre un círculo que destapa la portada. -->
+<div class="cortina" id="cortina" aria-hidden="true">
+  <svg class="cortina__lienzo" id="cortina-lienzo" focusable="false" aria-hidden="true">
+    <defs>
+      <mask id="cortina-mascara" maskUnits="userSpaceOnUse">
+        <rect id="cortina-m-rect" x="0" y="0" fill="#fff"/>
+        <circle id="cortina-m-hueco" r="0" fill="#000"/>
+      </mask>
+    </defs>
+    <rect class="cortina__madera" id="cortina-madera" x="0" y="0" mask="url(#cortina-mascara)"/>
+  </svg>
+  <svg class="cortina__veta veta-dibujo" aria-hidden="true" focusable="false"></svg>
+  <div class="cortina__contenido" id="cortina-contenido">
+    <!--svg:marca/rotulo.svg class="cortina__rotulo" aria-hidden="true" focusable="false"-->
+    <!--svg:marca/seis.svg class="cortina__seis" aria-hidden="true" focusable="false"-->
+  </div>
+</div>
+
+<header class="cab" id="cab">
+  <div class="env">
+    <a class="cab__marca" href="#inicio" aria-label="Casa Rural Garrido, al inicio">
+      <span class="cab__seis" id="cab-seis" aria-hidden="true">
+        <!--svg:marca/seis.svg class="seis-base" focusable="false"-->
+        <!--svg:marca/seis.svg class="seis-lleno" focusable="false"-->
+      </span>
+      <span class="cab__nombre">Casa Rural Garrido</span>
+    </a>
+    <nav class="cab__nav" aria-label="Secciones">
+      <a href="#casa">La casa</a>
+      <a href="#habitaciones">Habitaciones</a>
+      <a href="#balcon">El balcón</a>
+      <a href="#rincon">El Rincón</a>
+      <a href="#opiniones">Opiniones</a>
+    </nav>
+    <a class="btn" href="#reserva">Reservar</a>
+    <button class="cab__menu" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movil"><span></span><b class="visualmente-oculto">Menú</b></button>
+  </div>
+</header>
+<nav class="menu-movil" id="menu-movil" aria-label="Menú" aria-hidden="true">
+  <a href="#casa">La casa</a>
+  <a href="#habitaciones">Habitaciones</a>
+  <a href="#balcon">El balcón</a>
+  <a href="#rincon">El Rincón</a>
+  <a href="#mesa">A la lumbre</a>
+  <a href="#opiniones">Opiniones</a>
+  <a href="#llegar">Cómo llegar</a>
+  <a class="btn btn--oro" href="#reserva">Reservar</a>
+</nav>
+
+<main id="principal">
+
+<!-- ============ 1. hero: la casa del número 6 ============ -->
+<section class="hero" id="inicio" aria-labelledby="hero-tit">
+  <svg class="hero__veta veta-dibujo" aria-hidden="true" focusable="false"></svg>
+  <div class="env">
+    <div class="hero__txt">
+      <!--svg:marca/rotulo.svg class="hero__rotulo" role="img" aria-label="Rótulo de la casa: Casa Rural Garrido"-->
+      <p class="eti">Calle Solano, 6 · Ademuz · Siglo XVIII</p>
+      <h1 class="hero__tit" id="hero-tit" data-partir>La casa del <em>número&nbsp;6</em></h1>
+      <p class="hero__lead">Una casa del siglo XVIII junto a la plaza de Ademuz. Habitaciones con nombre propio y balcón al valle del Turia, desayuno casero y una sala con chimenea y piano.</p>
+      <p class="hero__notas"><b>9,2</b><span>en Booking, con 536 opiniones · Traveller Review Award 2026</span></p>
+      <div class="hero__acc">
+        <a class="btn btn--oro" href="#habitaciones">Ver las habitaciones</a>
+        <a class="btn btn--hueco" href="#reserva">Ver fechas libres</a>
+      </div>
+    </div>
+    <div class="hero__fig">
+      <div class="umbral" id="umbral" data-lado="fuera">
+        <div class="umbral__fuera"><img data-foto="porton-noche" sizes="(max-width: 899px) 92vw, 500px" fetchpriority="high" alt="El portón de la casa, de noche: puerta de madera bajo un arco de piedra en la calle Solano"></div>
+        <div class="umbral__dentro"><img data-foto="salon-fuego" sizes="(max-width: 899px) 115vw, 625px" alt="Dentro, el salón con la chimenea encendida, leña y mecedoras"></div>
+        <span class="umbral__raya"></span>
+        <span class="umbral__eti umbral__eti--fuera">Calle Solano</span>
+        <span class="umbral__eti umbral__eti--dentro">El salón</span>
+        <button class="umbral__asa" id="umbral-asa" type="button" role="slider" aria-label="Cruzar el umbral: de la calle al salón" aria-valuemin="0" aria-valuemax="100" aria-valuenow="42" aria-valuetext="Más calle que salón">6</button>
+      </div>
+      <p class="hero__pista">Arrastre el 6 para entrar en la casa</p>
+    </div>
+  </div>
+</section>
+
+<div class="veta" aria-hidden="true"><svg class="veta-dibujo" focusable="false"></svg></div>
+
+<!-- ============ 2. la casa ============ -->
+<section class="casa" id="casa" aria-labelledby="casa-tit">
+  <div class="env">
+    <div class="casa__cab">
+      <div>
+        <p class="eti">La casa</p>
+        <h2 class="tit" id="casa-tit" data-partir>Siglo XVIII, junto a la <em>plaza</em></h2>
+      </div>
+      <div>
+        <p class="entrada" data-revela>Se entra por un portón de madera claveteada bajo un arco de piedra, en la cuesta de la calle Solano. Dentro hay vigas, suelos de ajedrez, una escalera de balaustres torneados y paredes de color ocre.</p>
+        <p class="entrada suave" data-revela>La reforma terminó la Nochevieja de 1999. Desde entonces la casa conserva lo que tenía, y se ha ido llenando de lo que dejaban los huéspedes.</p>
+      </div>
+    </div>
+    <div class="casa__fotos">
+      <figure class="casa__f1" data-revela><div class="arco"><img data-foto="escalera" sizes="(max-width: 899px) 92vw, 470px" alt="La escalera de balaustres torneados, con azulejos en los peldaños"></div><figcaption>La escalera</figcaption></figure>
+      <figure class="casa__f2" data-revela><div class="arco"><img data-foto="rotulo-foto" sizes="(max-width: 899px) 45vw, 350px" alt="El rótulo tallado sobre la puerta: Casa Rural Garrido y el número 6"></div><figcaption>El rótulo de la puerta</figcaption></figure>
+      <figure class="casa__f3" data-revela><div class="arco"><img data-foto="salon" sizes="(max-width: 899px) 45vw, 370px" alt="La sala, con sofás de flores, mecedoras de enea y chimenea"></div><figcaption>La sala de la chimenea</figcaption></figure>
+      <figure class="casa__f4" data-revela><div class="arco"><img data-foto="calle" sizes="(max-width: 899px) 92vw, 740px" alt="La casa vista desde la calle, entre fachadas de piedra del casco antiguo de Ademuz"></div><figcaption>La calle Solano, en el casco antiguo</figcaption></figure>
+    </div>
+    <ul class="casa__lista">
+      <li data-revela><b>Sala de lectura</b><span>Con chimenea y piano</span></li>
+      <li data-revela><b>Desayuno casero</b><span>Lo que más nombran las opiniones</span></li>
+      <li data-revela><b>Baño en cada habitación</b><span>Una con bañera de hidromasaje</span></li>
+      <li data-revela><b>Wifi gratis</b><span>9,7 en Booking</span></li>
+    </ul>
+
+    <!-- OPCIONAL «Cómo empezó» (se puede quitar entero) -->
+    <div class="historia" id="historia">
+      <div class="historia__cab">
+        <h3 class="tit" data-partir>Cómo empezó</h3>
+        <p>Primero fueron las actividades al aire libre, después la casa y, con los años, un libro de visitas, exposiciones y conciertos.</p>
+      </div>
+      <ol class="historia__linea">
+        <li data-revela><b>Siglo XVIII</b><span>Se levanta la casa, junto a la plaza de Ademuz.</span></li>
+        <li data-revela><b>Finales de los 90</b><span>Nace Ademuz Aventura: caballos, canoas, barranquismo, BTT y senderismo.</span></li>
+        <li data-revela><b>31·12·1999</b><span>Termina la reforma. Esa noche les pilló el efecto 2000.</span></li>
+        <li data-revela><b>2002</b><span>Empieza el libro de visitas y el álbum con las fotos de los huéspedes.</span></li>
+        <li data-revela><b>Después</b><span>Exposiciones de alumnos de Bellas Artes, conciertos del Conservatorio, tertulias y catas de vino.</span></li>
+      </ol>
+    </div>
+    <!-- fin OPCIONAL «Cómo empezó» -->
+  </div>
+</section>
+
+<!-- ============ 3. habitaciones: seis puertas ============ -->
+<section class="habs oscura" id="habitaciones" aria-labelledby="habs-tit">
+  <div class="env">
+    <div class="habs__cab">
+      <div>
+        <p class="eti">Habitaciones</p>
+        <h2 class="tit" id="habs-tit" data-partir>Seis puertas, seis <em>nombres</em></h2>
+      </div>
+      <p>Cada habitación tiene su nombre en una placa y su baño. Abra una puerta para ver cómo es.</p>
+    </div>
+
+    <div class="puertas" id="puertas">
+      <button type="button" class="puerta" data-hab="ciervo" aria-pressed="true" aria-controls="hab-ciervo"><img data-foto="hab-ciervo" sizes="(max-width: 899px) 30vw, 190px" alt=""><span class="puerta__hoja"><span class="puerta__placa">El Ciervo</span></span><span class="puerta__dato">Primera planta · 150 + 90</span></button>
+      <button type="button" class="puerta" data-hab="molino" aria-pressed="false" aria-controls="hab-molino"><img data-foto="hab-molino" sizes="(max-width: 899px) 30vw, 190px" alt=""><span class="puerta__hoja"><span class="puerta__placa">El Molino</span></span><span class="puerta__dato">La más grande · hidromasaje</span></button>
+      <button type="button" class="puerta" data-hab="escudo" aria-pressed="false" aria-controls="hab-escudo"><img data-foto="hab-escudo" sizes="(max-width: 899px) 30vw, 190px" alt=""><span class="puerta__hoja"><span class="puerta__placa">El Escudo</span></span><span class="puerta__dato">Segunda planta · 135 y nido</span></button>
+      <button type="button" class="puerta" data-hab="castillo" aria-pressed="false" aria-controls="hab-castillo"><img data-foto="hab-castillo" sizes="(max-width: 899px) 30vw, 190px" alt=""><span class="puerta__hoja"><span class="puerta__placa">El Castillo</span></span><span class="puerta__dato">Balcón con vistas · 150</span></button>
+      <button type="button" class="puerta" data-hab="aguila" aria-pressed="false" aria-controls="hab-aguila"><img data-foto="hab-aguila" sizes="(max-width: 899px) 30vw, 190px" alt=""><span class="puerta__hoja"><span class="puerta__placa">El Águila</span></span><span class="puerta__dato">Balcón con vistas · 150</span></button>
+      <button type="button" class="puerta" data-hab="barco" aria-pressed="false" aria-controls="hab-barco"><img data-foto="hab-barco" sizes="(max-width: 899px) 30vw, 190px" alt=""><span class="puerta__hoja"><span class="puerta__placa">El Barco</span></span><span class="puerta__dato">Balcón con vistas · 150</span></button>
+    </div>
+
+    <div class="ficha-hab es-activa" id="hab-ciervo" data-hab="ciervo">
+      <div class="ficha-hab__fotos">
+        <div class="f1"><img data-foto="hab-ciervo" sizes="(max-width: 899px) 56vw, 440px" alt="El Ciervo: suelo de ajedrez, camas de forja, vigas de madera y una máquina de coser junto al balcón"></div>
+        <div class="f2"><img data-foto="hab-ciervo-2" sizes="(max-width: 899px) 34vw, 275px" alt="El Ciervo: la cama de 150 con cabecero de forja y la cortina del balcón"></div>
+      </div>
+      <div class="ficha-hab__txt">
+        <h3>El Ciervo</h3>
+        <p class="suave">Amplia, en la primera planta, con suelo de ajedrez y vigas de madera.</p>
+        <dl><dt>Planta</dt><dd>Primera</dd><dt>Camas</dt><dd>Una de 150 y una de 90</dd><dt>Baño</dt><dd>Propio</dd><dt>Además</dt><dd>Armario empotrado y calefacción</dd></dl>
+        <a class="btn btn--oro" href="#reserva" data-reservar="ciervo">Ver fechas de El Ciervo</a>
+      </div>
+    </div>
+    <div class="ficha-hab" id="hab-molino" data-hab="molino">
+      <div class="ficha-hab__fotos">
+        <div class="f1"><img data-foto="hab-molino" sizes="(max-width: 899px) 56vw, 440px" alt="El Molino: habitación grande con suelo de ajedrez, cama de matrimonio, diván de forja y dosel"></div>
+        <div class="f2"><img data-foto="hab-molino-2" sizes="(max-width: 899px) 34vw, 275px" alt="El baño con bañera, suelo de ajedrez y puerta de cuarterones"></div>
+      </div>
+      <div class="ficha-hab__txt">
+        <h3>El Molino</h3>
+        <p class="suave">La habitación más grande de la casa, en la parte antigua.</p>
+        <dl><dt>Planta</dt><dd>Primera, parte antigua</dd><dt>Camas</dt><dd>Una de 150 y dos de 90</dd><dt>Baño</dt><dd>Con bañera de hidromasaje</dd></dl>
+        <a class="btn btn--oro" href="#reserva" data-reservar="molino">Ver fechas de El Molino</a>
+      </div>
+    </div>
+    <div class="ficha-hab" id="hab-escudo" data-hab="escudo">
+      <div class="ficha-hab__fotos">
+        <div class="f1"><img data-foto="hab-escudo" sizes="(max-width: 899px) 92vw, 440px" alt="El Escudo: cama de forja, paredes amarillas y ventana con contraventanas de madera"></div>
+      </div>
+      <div class="ficha-hab__txt">
+        <h3>El Escudo</h3>
+        <p class="suave">En la segunda planta, con la ventana a la calle de arriba.</p>
+        <dl><dt>Planta</dt><dd>Segunda</dd><dt>Camas</dt><dd>Una de 135 y una cama nido</dd><dt>Baño</dt><dd>Con ducha</dd></dl>
+        <a class="btn btn--oro" href="#reserva" data-reservar="escudo">Ver fechas de El Escudo</a>
+      </div>
+    </div>
+    <div class="ficha-hab" id="hab-castillo" data-hab="castillo">
+      <div class="ficha-hab__fotos">
+        <div class="f1"><img data-foto="hab-castillo" sizes="(max-width: 899px) 56vw, 440px" alt="El Castillo: cama de forja, diván, armario de pino y ventana con contraventanas"></div>
+        <div class="f2"><img data-foto="hab-castillo-2" sizes="(max-width: 899px) 34vw, 275px" alt="El Castillo: el diván de forja junto a la cama"></div>
+      </div>
+      <div class="ficha-hab__txt">
+        <h3>El Castillo</h3>
+        <p class="suave">En la segunda planta, con balcón y vistas.</p>
+        <dl><dt>Planta</dt><dd>Segunda</dd><dt>Camas</dt><dd>Una de 150</dd><dt>Baño</dt><dd>Propio</dd><dt>Además</dt><dd>Balcón con vistas, armario y calefacción</dd></dl>
+        <a class="btn btn--oro" href="#reserva" data-reservar="castillo">Ver fechas de El Castillo</a>
+      </div>
+    </div>
+    <div class="ficha-hab" id="hab-aguila" data-hab="aguila">
+      <div class="ficha-hab__fotos">
+        <div class="f1"><img data-foto="hab-aguila" sizes="(max-width: 899px) 56vw, 440px" alt="El Águila: paredes azules, techo de madera y el balcón abierto a los tejados y al valle"></div>
+        <div class="f2"><img data-foto="balcon-ventana" sizes="(max-width: 899px) 34vw, 275px" alt="Desde la cama, el balcón de forja y el valle del Turia"></div>
+      </div>
+      <div class="ficha-hab__txt">
+        <h3>El Águila</h3>
+        <p class="suave">«Bonitas vistas desde la habitación El Águila», escribió un huésped en Booking.</p>
+        <dl><dt>Planta</dt><dd>Segunda</dd><dt>Camas</dt><dd>Una de 150</dd><dt>Baño</dt><dd>Propio</dd><dt>Además</dt><dd>Balcón con vistas, armario y calefacción</dd></dl>
+        <a class="btn btn--oro" href="#reserva" data-reservar="aguila">Ver fechas de El Águila</a>
+      </div>
+    </div>
+    <div class="ficha-hab" id="hab-barco" data-hab="barco">
+      <div class="ficha-hab__fotos">
+        <div class="f1"><img data-foto="hab-barco" sizes="(max-width: 899px) 92vw, 440px" alt="El Barco: cama de 150 con cabecero de forja y edredón gris"></div>
+      </div>
+      <div class="ficha-hab__txt">
+        <h3>El Barco</h3>
+        <p class="suave">En la segunda planta, con balcón y vistas.</p>
+        <dl><dt>Planta</dt><dd>Segunda</dd><dt>Camas</dt><dd>Una de 150</dd><dt>Baño</dt><dd>Propio</dd><dt>Además</dt><dd>Balcón con vistas, armario y calefacción</dd></dl>
+        <a class="btn btn--oro" href="#reserva" data-reservar="barco">Ver fechas de El Barco</a>
+      </div>
+    </div>
+
+    <!-- solo en la versión sobria -->
+    <div class="de-un-vistazo">
+      <table>
+        <caption class="visualmente-oculto">Las seis habitaciones, de un vistazo</caption>
+        <thead><tr><th scope="col">Habitación</th><th scope="col">Planta</th><th scope="col">Camas</th><th scope="col">Baño</th><th scope="col">Balcón</th></tr></thead>
+        <tbody>
+          <tr><td>El Ciervo</td><td>Primera</td><td>150 + 90</td><td>Propio</td><td>—</td></tr>
+          <tr><td>El Molino</td><td>Primera (parte antigua)</td><td>150 + 90 + 90</td><td>Hidromasaje</td><td>—</td></tr>
+          <tr><td>El Escudo</td><td>Segunda</td><td>135 + nido</td><td>Ducha</td><td>Ventana a la calle</td></tr>
+          <tr><td>El Castillo</td><td>Segunda</td><td>150</td><td>Propio</td><td>Con vistas</td></tr>
+          <tr><td>El Águila</td><td>Segunda</td><td>150</td><td>Propio</td><td>Con vistas</td></tr>
+          <tr><td>El Barco</td><td>Segunda</td><td>150</td><td>Propio</td><td>Con vistas</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="galeria">
+      <h3 class="eti">Más fotos de las habitaciones</h3>
+      <div class="galeria__rejilla">
+        <img data-foto="galeria-1" sizes="(max-width: 699px) 45vw, 400px" alt="Habitación con paredes malvas, techo de madera y balcón abierto al valle">
+        <img data-foto="galeria-2" sizes="(max-width: 699px) 45vw, 400px" alt="Habitación con suelo de ajedrez azul y puerta de cuarterones">
+        <img data-foto="galeria-3" sizes="(max-width: 699px) 45vw, 400px" alt="Habitación con dos camas de madera y suelo de ajedrez">
+        <img data-foto="galeria-4" sizes="(max-width: 699px) 45vw, 400px" alt="Diván de forja bajo una ventana con vistas al campo">
+        <img data-foto="galeria-5" sizes="(max-width: 699px) 45vw, 400px" alt="Habitación blanca con cama de forja y mesita de ganchillo">
+        <img data-foto="galeria-6" sizes="(max-width: 699px) 45vw, 400px" alt="El comedor con la escalera de balaustres">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. el balcón ============ -->
+<section class="balcon" id="balcon" aria-labelledby="balcon-tit">
+  <div class="env">
+    <div class="balcon__cab">
+      <div>
+        <p class="eti">El balcón</p>
+        <h2 class="tit" id="balcon-tit" data-partir>Los tejados de Ademuz y el valle del <em>Turia</em></h2>
+      </div>
+      <p class="entrada suave" data-revela>La mayoría de las habitaciones tienen un balcón de forja que da al valle. Desde arriba se ven los tejados del casco antiguo, la vega y la sierra.</p>
+    </div>
+    <div class="balcon__marco" id="balcon-marco">
+      <img data-foto="tejados" sizes="(max-width: 1279px) 92vw, 1200px" alt="Desde un balcón de forja: tejados de teja árabe, la vega y los montes del Rincón de Ademuz">
+      <div class="contra contra--i" aria-hidden="true"></div>
+      <div class="contra contra--d" aria-hidden="true"></div>
+      <p class="sol" id="sol" aria-live="polite"><span>Hoy en Ademuz amanece a las</span><b id="sol-sale">--:--</b><span id="sol-pone">y el sol se pone a las --:--</span></p>
+    </div>
+    <div class="balcon__pie">
+      <div class="dato" data-revela>
+        <b>Entre Teruel y Cuenca</b>
+        <p>Ademuz se asoma a la vega del Turia en el Rincón de Ademuz: un pedazo de Valencia rodeado de Aragón y Castilla-La Mancha.</p>
+      </div>
+      <figure data-revela><div class="arco"><img data-foto="mirador" sizes="(max-width: 899px) 45vw, 400px" alt="Una caminante sentada en una roca mira Ademuz desde lo alto"></div><figcaption>Ademuz, desde el monte</figcaption></figure>
+      <figure data-revela><div class="arco"><img data-foto="balcon-hab" sizes="(max-width: 899px) 45vw, 400px" alt="Habitación azul con el balcón abierto a los tejados y al valle"></div><figcaption>El valle desde la cama</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. el Rincón en minutos ============ -->
+<section class="rincon" id="rincon" aria-labelledby="rincon-tit">
+  <div class="env">
+    <div class="rincon__cuerpo">
+      <div>
+        <p class="eti">El Rincón de Ademuz</p>
+        <h2 class="tit" id="rincon-tit" data-partir>Todo el Rincón, a un <em>rato</em></h2>
+        <p class="entrada suave" data-revela style="margin-top:18px">Desde la casa, el río Bohilgues, Castielfabib y Moya quedan a menos de media hora, y Teruel a menos de cuarenta minutos.</p>
+        <ul class="rincon__lista" id="rincon-lista"></ul>
+        <p class="rincon__nota">Minutos en coche desde la calle Solano, calculados con OpenStreetMap (OSRM). Pueden variar según la carretera.</p>
+      </div>
+      <svg class="rincon__plano" id="rincon-plano" viewBox="0 0 560 560" role="img" aria-labelledby="rincon-plano-tit"><title id="rincon-plano-tit">Plano de anillos: cada pueblo en su dirección real desde la casa y a la distancia de sus minutos en coche</title></svg>
+    </div>
+    <div class="rincon__fotos">
+      <figure data-revela><div class="arco"><img data-foto="ademuz-aereo" sizes="(max-width: 899px) 92vw, 520px" alt="Ademuz desde lo alto: el pueblo en su cerro, la vega y la muela al fondo"></div><figcaption>Ademuz y su vega</figcaption></figure>
+      <figure data-revela><div class="arco"><img data-foto="porton-dia" sizes="(max-width: 899px) 45vw, 400px" alt="La fachada de la casa de día, con el portón bajo el arco de sillería"></div><figcaption>La casa, de día</figcaption></figure>
+      <figure data-revela><div class="arco"><img data-foto="muela" sizes="(max-width: 899px) 45vw, 300px" alt="Un monte en forma de muela asoma sobre la niebla detrás de los tejados"></div><figcaption>Niebla en el valle</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- OPCIONAL «A la lumbre» (se puede quitar entero) -->
+<section class="mesa" id="mesa" aria-labelledby="mesa-tit">
+  <div class="env">
+    <div class="mesa__brasa" id="brasa">
+      <img data-foto="salon-fuego" sizes="(max-width: 1279px) 100vw, 1229px" alt="La chimenea encendida con leña, junto a una mecedora de enea">
+      <div class="mesa__txt">
+        <p class="eti">A la lumbre</p>
+        <h2 class="tit" id="mesa-tit" data-partir>La sobremesa, junto al <em>fuego</em></h2>
+        <p>En invierno se llega de noche, se enciende la chimenea y por la mañana espera un desayuno casero.</p>
+        <p class="mesa__platos">Cocina de la zona: cocido, gachas, empedrado, pollo con ciruelas. Pregunte si hay comidas en sus fechas.</p>
+      </div>
+    </div>
+    <div class="mesa__tres">
+      <figure data-revela><div class="marco"><img data-foto="mesa-chimenea" sizes="(max-width: 899px) 92vw, 470px" alt="Mesa de madera junto a la chimenea, con un decantador y copas de vino"></div><figcaption><b>La sala</b>Chimenea, piano y libros para la sobremesa.</figcaption></figure>
+      <figure data-revela><div class="marco"><img data-foto="pastas" sizes="(max-width: 899px) 45vw, 390px" alt="Bandeja con pastas y tortas caseras"></div><figcaption><b>El desayuno</b>Surtido casero: lo que más nombran las opiniones.</figcaption></figure>
+      <figure data-revela><div class="marco"><img data-foto="bodegon" sizes="(max-width: 899px) 45vw, 390px" alt="Dos copas de vino tinto, almendras y una prensa antigua"></div><figcaption><b>Las catas</b>Vino de la zona, almendras y conversación.</figcaption></figure>
+    </div>
+  </div>
+</section>
+<!-- fin OPCIONAL «A la lumbre» -->
+
+<!-- ============ 6. opiniones ============ -->
+<section class="opiniones" id="opiniones" aria-labelledby="opi-tit">
+  <div class="env">
+    <div class="opiniones__cab">
+      <div>
+        <p class="eti">Opiniones</p>
+        <h2 class="tit" id="opi-tit" data-partir>Lo que escriben al <em>irse</em></h2>
+      </div>
+      <div class="notas">
+        <p class="nota"><b>9,2</b><span>Booking · 536 opiniones · Traveller Review Award 2026</span></p>
+        <p class="nota"><b>4,6</b><span>Google · 399 reseñas</span></p>
+        <p class="nota"><b>4,5</b><span>Tripadvisor · 83 opiniones</span></p>
+      </div>
+    </div>
+    <div class="citas">
+      <blockquote class="cita" data-revela><p>Casa rural muy bien conservada y con encanto. Los dueños son muy simpáticos y familiares, dispuestos a ayudar con todo lo que necesites.</p><footer>Opinión en Booking</footer></blockquote>
+      <blockquote class="cita" data-revela><p>El trato muy familiar, amables y predispuestos para ayudar e informar. Todo limpio, los desayunos con surtido casero y la casa, una pasada.</p><footer>Opinión en Booking</footer></blockquote>
+      <blockquote class="cita" data-revela><p>Casa bonita, bien situada en el pueblo, atención excelente. Bonitas vistas desde la habitación El Águila.</p><footer>Opinión en Booking</footer></blockquote>
+    </div>
+    <p class="opiniones__pie"><span>Notas leídas el 16 de octubre de 2026.</span><a class="enlace" href="https://www.booking.com/hotel/es/casa-rural-garrido.es.html" rel="noopener">Ver las opiniones en Booking</a><a class="enlace" href="https://www.google.com/maps/search/?api=1&amp;query=Casa+Rural+Garrido+Ademuz" rel="noopener">Ver las reseñas en Google</a></p>
+  </div>
+</section>
+
+<!-- ============ 7. reserva (motor de demostración) ============ -->
+<section class="reserva oscura" id="reserva" aria-labelledby="reserva-tit">
+  <div class="env">
+    <header class="reserva__cab">
+      <div>
+        <p class="eti">Reservar</p>
+        <h2 class="tit" id="reserva-tit" data-partir>Elija noches y <em>habitación</em></h2>
+      </div>
+      <p class="suave">Marque la llegada y la salida en el calendario: verá qué habitaciones quedan libres esas noches y lo que cuesta cada una.</p>
+    </header>
+    <p class="demo" role="note"><b>Demostración.</b> Así funcionará la reserva directa: las fechas ocupadas y los precios son de ejemplo, y no se cobra ni se envía nada.</p>
+    <div class="motor" id="motor"></div>
+    <noscript><p class="suave">Para reservar sin JavaScript, llame o escriba por WhatsApp al 677 50 74 67.</p></noscript>
+    <p class="reserva__alt">¿Prefiere hablar? Llame o escriba por WhatsApp al <a class="enlace" href="tel:+34677507467">677 50 74 67</a>. También está en <a class="enlace" href="https://www.booking.com/hotel/es/casa-rural-garrido.es.html" rel="noopener">Booking</a>.</p>
+  </div>
+</section>
+
+<!-- ============ 8. cómo llegar ============ -->
+<section class="llegar" id="llegar" aria-labelledby="llegar-tit">
+  <div class="env">
+    <div class="llegar__datos">
+      <p class="eti">Cómo llegar</p>
+      <h2 class="tit" id="llegar-tit" data-partir>Calle Solano, <em>6</em></h2>
+      <address class="entrada">Calle Solano, 6 · 46140 Ademuz (Valencia)</address>
+      <div class="llegar__tabla">
+        <div><b>Desde Teruel</b><span>37 min · 45 km</span></div>
+        <div><b>Desde Cuenca</b><span>1 h 27 min · 116 km</span></div>
+        <div><b>Desde Valencia</b><span>1 h 52 min · 153 km</span></div>
+      </div>
+      <p class="suave">La casa está en el casco antiguo, a dos pasos de la plaza.</p>
+      <a class="enlace" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.06033,-1.28604" rel="noopener">Abrir la ruta en Google Maps</a>
+    </div>
+    <div class="mapa" id="mapa">
+      <div class="mapa__consent" id="mapa-consent">
+        <p>El mapa es de Google y, al abrirlo, Google puede instalar sus cookies.</p>
+        <button class="btn" type="button" id="mapa-btn">Ver el mapa</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ pie: el rótulo completo ============ -->
+<footer class="pie" id="pie">
+  <svg class="hero__veta veta-dibujo" aria-hidden="true" focusable="false"></svg>
+  <div class="env">
+    <div class="pie__marca">
+      <!--svg:marca/rotulo.svg class="pie__rotulo" role="img" aria-label="Casa Rural Garrido"-->
+      <!--svg:marca/seis.svg class="pie__seis" aria-hidden="true" focusable="false"-->
+      <p>Casa del siglo XVIII en la calle Solano, 6, junto a la plaza de Ademuz.</p>
+    </div>
+    <div class="pie__cols">
+      <div>
+        <h2>La casa</h2>
+        <address>Calle Solano, 6<br>46140 Ademuz (Valencia)</address>
+        <p>Registro de turismo CV-ARU000077-V</p>
+      </div>
+      <div>
+        <h2>Contacto</h2>
+        <ul>
+          <li><a href="tel:+34677507467">677 50 74 67</a> · teléfono y WhatsApp</li>
+          <li><a href="https://www.booking.com/hotel/es/casa-rural-garrido.es.html" rel="noopener">Booking</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Casa+Rural+Garrido+Ademuz" rel="noopener">Google Maps</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>En la web</h2>
+        <ul>
+          <li><a href="#habitaciones">Habitaciones</a></li>
+          <li><a href="#rincon">El Rincón en minutos</a></li>
+          <li><a href="#reserva">Reservar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie__legal">
+      <span>© <span id="anno">2026</span> Casa Rural Garrido</span>
+      <a href="aviso-legal.html">Aviso legal</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="cookies.html">Cookies</a>
+      <a href="accesibilidad.html">Accesibilidad</a>
+      <button type="button" id="abrir-cookies">Preferencias de cookies</button>
+    </div>
+  </div>
+</footer>
+
+<div class="barra" id="barra" aria-hidden="true">
+  <a class="btn btn--hueco" href="tel:+34677507467" tabindex="-1">Llamar</a>
+  <a class="btn btn--oro" href="#reserva" tabindex="-1">Reservar</a>
+</div>
+
+<div class="cookies" id="cookies" role="region" aria-label="Aviso de cookies" hidden>
+  <p>Esta web no usa cookies de análisis ni de publicidad. Guarda en su navegador que ha visto este aviso, y el mapa de Google solo se carga si lo pide. <a href="cookies.html">Más información</a></p>
+  <div class="cookies__acc">
+    <button class="btn btn--oro" type="button" id="ck-si">Entendido</button>
+    <button class="btn btn--hueco" type="button" id="ck-no">Solo lo necesario</button>
+  </div>
+</div>
+
+<!-- MANDO DE MAQUETA (no viaja al cliente): solo con ?revision -->
+<div class="mando" id="mando" role="group" aria-label="Dos versiones de la misma web" hidden>
+  <span class="mando__eti">Versión</span>
+  <button type="button" data-densidad="cargada" aria-pressed="true">Solano, 6</button>
+  <button type="button" data-densidad="sobria" aria-pressed="false">Sobria</button>
+</div>
+<!-- fin del MANDO DE MAQUETA -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+<script src="js/main.js?v=eef7c5f3" defer></script>
+<script src="js/reserva.js?v=944d3acb" defer></script>
+</body>
+</html>

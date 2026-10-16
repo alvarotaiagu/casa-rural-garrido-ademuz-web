@@ -1,0 +1,168 @@
+{
+  "estructura_ok": true,
+  "errores": [],
+  "metodo": "IoU a x3: el SVG se pinta a x3 (tinta negra sobre blanco, antialias de Chromium, corte al 50 %) y\nse compara con la referencia rasterizada a x3 por área: para letras y 6, el contorno trazado en la\nfoto (umbral + ajuste a la arista) antes de suavizarlo y pasarlo a Bézier; para la cartela, el\ncampo de la segmentación ampliado en bicúbico; para el medallón, el polígono del ajuste radial.\nMide lo fiel que es el vector a lo trazado; lo fiel que es el trazado a la foto se ve en las\ncomparaciones (contorno rojo sobre la foto) y en la sensibilidad al umbral (iou.json).",
+  "cartela-borde": 0.9743,
+  "cartela-fondo": 0.9971,
+  "letras (todas)": 0.9819,
+  "por_letra": [
+    {
+      "i": 0,
+      "letra": "C",
+      "iou": 0.9794,
+      "iou_si_umbral_130": 0.9169,
+      "iou_si_umbral_140": 0.846,
+      "iou_si_umbral_150": 0.6383
+    },
+    {
+      "i": 1,
+      "letra": "A",
+      "iou": 0.9805,
+      "iou_si_umbral_130": 0.8994,
+      "iou_si_umbral_140": 0.8258,
+      "iou_si_umbral_150": 0.6718
+    },
+    {
+      "i": 2,
+      "letra": "S",
+      "iou": 0.9805,
+      "iou_si_umbral_130": 0.9076,
+      "iou_si_umbral_140": 0.8478,
+      "iou_si_umbral_150": 0.7344
+    },
+    {
+      "i": 3,
+      "letra": "A",
+      "iou": 0.9804,
+      "iou_si_umbral_130": 0.9139,
+      "iou_si_umbral_140": 0.8633,
+      "iou_si_umbral_150": 0.7659
+    },
+    {
+      "i": 4,
+      "letra": "R",
+      "iou": 0.9815,
+      "iou_si_umbral_130": 0.9354,
+      "iou_si_umbral_140": 0.9012,
+      "iou_si_umbral_150": 0.8272
+    },
+    {
+      "i": 5,
+      "letra": "U",
+      "iou": 0.981,
+      "iou_si_umbral_130": 0.9248,
+      "iou_si_umbral_140": 0.8856,
+      "iou_si_umbral_150": 0.8075
+    },
+    {
+      "i": 6,
+      "letra": "R",
+      "iou": 0.9825,
+      "iou_si_umbral_130": 0.9411,
+      "iou_si_umbral_140": 0.9002,
+      "iou_si_umbral_150": 0.8342
+    },
+    {
+      "i": 7,
+      "letra": "A",
+      "iou": 0.9829,
+      "iou_si_umbral_130": 0.9327,
+      "iou_si_umbral_140": 0.8948,
+      "iou_si_umbral_150": 0.8327
+    },
+    {
+      "i": 8,
+      "letra": "L",
+      "iou": 0.98,
+      "iou_si_umbral_130": 0.9276,
+      "iou_si_umbral_140": 0.8925,
+      "iou_si_umbral_150": 0.8135
+    },
+    {
+      "i": 9,
+      "letra": "G",
+      "iou": 0.9846,
+      "iou_si_umbral_130": 0.9429,
+      "iou_si_umbral_140": 0.9181,
+      "iou_si_umbral_150": 0.8666
+    },
+    {
+      "i": 10,
+      "letra": "A",
+      "iou": 0.9827,
+      "iou_si_umbral_130": 0.9155,
+      "iou_si_umbral_140": 0.8937,
+      "iou_si_umbral_150": 0.8411
+    },
+    {
+      "i": 11,
+      "letra": "R",
+      "iou": 0.982,
+      "iou_si_umbral_130": 0.9196,
+      "iou_si_umbral_140": 0.8936,
+      "iou_si_umbral_150": 0.8316
+    },
+    {
+      "i": 12,
+      "letra": "R",
+      "iou": 0.9808,
+      "iou_si_umbral_130": 0.914,
+      "iou_si_umbral_140": 0.9088,
+      "iou_si_umbral_150": 0.8656
+    },
+    {
+      "i": 13,
+      "letra": "I",
+      "iou": 0.978,
+      "iou_si_umbral_130": 0.8853,
+      "iou_si_umbral_140": 0.8847,
+      "iou_si_umbral_150": 0.8413
+    },
+    {
+      "i": 14,
+      "letra": "D",
+      "iou": 0.9857,
+      "iou_si_umbral_130": 0.9244,
+      "iou_si_umbral_140": 0.9233,
+      "iou_si_umbral_150": 0.8815
+    },
+    {
+      "i": 15,
+      "letra": "O",
+      "iou": 0.9856,
+      "iou_si_umbral_130": 0.9427,
+      "iou_si_umbral_140": 0.9251,
+      "iou_si_umbral_150": 0.8705
+    }
+  ],
+  "medallon-borde": 0.9914,
+  "medallon-fondo": 0.9983,
+  "seis": 0.9861,
+  "rotulo-solido": {
+    "iou_con_silueta": 0.996
+  },
+  "letras_sensibilidad": {
+    "umbral_130": {
+      "minimo": 0.8853,
+      "media": 0.9215
+    },
+    "umbral_140": {
+      "minimo": 0.8258,
+      "media": 0.8878
+    },
+    "umbral_150": {
+      "minimo": 0.6383,
+      "media": 0.8077
+    }
+  },
+  "letras_resumen": {
+    "minimo": 0.978,
+    "mediana": 0.9815,
+    "maximo": 0.9857,
+    "peores": [
+      "13 I 0.978",
+      "0 C 0.9794",
+      "8 L 0.98"
+    ]
+  }
+}
